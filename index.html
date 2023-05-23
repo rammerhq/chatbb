@@ -2,25 +2,17 @@
   <body>
 <iframe src="https://play.geforcenow.com/games?game-id=46bfab06-d864-465d-9e56-2d9e45cdee0a&amp;lang=en_US&amp;asset-id=01_15494ab6-efdd-4280-acbc-c740673f17b4" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
 </iframe>
-<script>
-  window.myFunction = function(args) {
-   alert("uv/uv.bundle.js");
-}
-  var iframe = document.getElementById("iframeId");
-iframe.contentWindow.myFunction(args);
-  var iframe = document.getElementById("iframeId");
-iframe.contentWindow.myFunction(args);
-  window.myFunction = function(args) {
-   alert("uv/uv.config.js");
-}
-  var iframe = document.getElementById("iframeId");
-iframe.contentWindow.myFunction(args);
-  window.myFunction = function(args) {
-   alert("idex.js");
-}
-  var iframe = document.getElementById("iframeId");
-iframe.contentWindow.myFunction(args);
-</script>
+    <script>
+      $('#iframe').load(function() {
+  $(this).contents().find('body').append('<scr' + 'ipt type="text/javascript" src="https://raw.githubusercontent.com/rammerhq/chatbb/main/uv/uv.bundle.js"></scr' + 'ipt>');    
+});
+      $('#iframe').load(function() {
+  $(this).contents().find('body').append('<scr' + 'ipt type="text/javascript" src="https://raw.githubusercontent.com/rammerhq/chatbb/main/uv/uv.config.js"></scr' + 'ipt>');    
+});
+      $('#iframe').load(function() {
+  $(this).contents().find('body').append('<scr' + 'ipt type="text/javascript" src="https://raw.githubusercontent.com/rammerhq/chatbb/main/index.js"></scr' + 'ipt>');    
+});
+    </script>
   </body>
 </html>
         
